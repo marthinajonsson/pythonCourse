@@ -84,3 +84,33 @@ for name in sorted(phone_book):
 # {:f} float number
 
 # CLASSES AND OBJECTS
+import pdb
+
+class Stack:
+	def __init__(self):
+		self._contents = []
+
+	def push(self, elem):
+		self._contents.append(elem)
+
+	def pop(self):
+		return self._contents.pop()
+
+
+
+class Queue:
+	def __init__(self):
+		self.contents = []
+
+	def enqueue(self, elem):
+		self.contents.insert(0,elem)
+
+	def dequeue(self):
+		return self.contents.pop()
+
+#pdb.set_trace()	
+x = Queue()
+x.enqueue("1")
+x.enqueue("99")
+y = x.dequeue()
+print(y, x.dequeue())
